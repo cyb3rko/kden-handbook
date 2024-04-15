@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Clean Caches
+Exec=/home/niko/Dokumente/Skripte/clean-caches.sh
+Comment=
+Terminal=true
+PrefersNonDefaultGPU=false
+Icon=cinnamon-panel-launcher
+Type=Application

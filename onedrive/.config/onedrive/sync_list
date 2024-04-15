@@ -1,0 +1,9 @@
+!build/kotlin/*
+!venv/*
+!.gradle/*
+!/Programming/Projects/Android/**/build/*
+!/Programming/Projects/Android/**/.cxx/*
+!__pycache__/*
+!node_modules/*
+
+/Programming

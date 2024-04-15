@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Update All
+Exec=/home/niko/Dokumente/Skripte/update-all.sh
+Comment=
+Terminal=true
+PrefersNonDefaultGPU=false
+Icon=cinnamon-panel-launcher
+Type=Application
+Name[de_DE]=3-Update All.desktop
