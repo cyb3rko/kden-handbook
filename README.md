@@ -1,4 +1,8 @@
-# Mint Handbook
+# KDE Neon Handbook
+
+System info: (KDE Neon + Plasma Wayland)
+
+---
 
 - [Resource Management](#resource-management)
   - [Large file and folder monitor](#large-file-and-folder-monitor)
