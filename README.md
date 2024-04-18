@@ -15,8 +15,6 @@
   - [Remove all pip packages](#remove-all-pip-packages)
 - [SSL Inspection](#ssl-inspection)
   - [Add root CA to java](#add-root-ca-to-java)
-- [Applications](#applications)
-  - [Laggy Steam](#laggy-steam)
 - [Other Tools](#other-tools)
   - [JAVA_HOME](#java_home)
   - [Exiftool](#exiftool)
@@ -131,16 +129,6 @@ Then type the following:
 ```shell
 keytool -import -alias aldi -keystore cacerts -file ~/Dokumente/AlDiRootCA.crt
 ```
-
-## Applications
-
-### Laggy Steam
-
-Go to the settings.
-
-Toggle off `Enable smooth scrolling in web views`.  
-Toggle on `Enable GPU accelerated rendering in web views`.  
-Toggle on `Enable hardware video decoding, if supported`.
 
 ## Other Tools
 
