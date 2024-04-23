@@ -1,0 +1,62 @@
+{
+  "policies": {
+    "AppAutoUpdate": false,
+    "AutofillAddressEnabled": false,
+    "AutofillCreditCardEnabled": false,
+    "DisabledCiphers": {
+      "TLS_DHE_RSA_WITH_AES_128_CBC_SHA": true,
+      "TLS_DHE_RSA_WITH_AES_256_CBC_SHA": true,
+      "TLS_RSA_WITH_AES_128_CBC_SHA": true,
+      "TLS_RSA_WITH_AES_256_CBC_SHA": true,
+      "TLS_RSA_WITH_3DES_EDE_CBC_SHA": true
+    },
+    "DisablePocket": true,
+    "DisableSetDesktopBackground": true,
+    "FirefoxHome": {
+      "Search": true
+    },
+    "HardwareAcceleration": true,
+    "Homepage": {
+      "StartPage": "homepage"
+    },
+    "LegacySameSiteCookieBehaviorEnabled": false,
+    "OfferToSaveLogins": false,
+    "PasswordManagerEnabled": false,
+    "PictureInPicture": {
+      "Enabled": false,
+      "Locked": true
+    },
+    "Preferences": {
+      "browser.aboutConfig.showWarning": {
+        "Value": false,
+        "Status": "locked"
+      },
+      "browser.bookmarks.restore_default_bookmarks": {
+        "Value": false,
+        "Status": "locked"
+      },
+      "browser.bookmarks.showMobileBookmarks": {
+        "Value": true,
+        "Status": "locked"
+      },
+      "browser.search.region": {
+        "Value": "DE",
+        "Status": "locked"
+      },
+      "browser.startup.couldRestoreSession.count": {
+        "Value": 0,
+        "Status": "locked"
+      },
+      "browser.vpn_promo.enabled": {
+        "Value": false,
+        "Status": "locked"
+      }
+    },
+    "PromptForDownloadLocation": false,
+    "RequestedLocales": "de",
+    "ShowHomeButton": false,
+    "UserMessaging": {
+      "SkipOnboarding": true
+    }
+  }
+}
