@@ -140,7 +140,7 @@ keytool -import -alias aldi -keystore cacerts -file ~/Dokumente/AlDiRootCA.crt
 
 ### Firefox
 
-To apply policies to Firefox (installed with Flatpak) via the `policies.json`, just place it at `/var/lib/flatpak/app/org.mozilla.firefox/x86_64/stable/<id>/files/lib/firefox/distribution`.  
+To apply policies to Firefox (installed with Flatpak) via the [policies.json](firefox/policies.json), just place it at `/var/lib/flatpak/app/org.mozilla.firefox/x86_64/stable/<id>/files/lib/firefox/distribution`.  
 Restart Firefox and find applied policies at `about:policies`.
 
 ## Other Tools
