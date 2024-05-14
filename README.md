@@ -11,12 +11,18 @@ System info: (KDE Neon + Plasma Wayland)
   - [journalctl](#journalctl)
 - [Packages](#packages)
   - [Cleanup after housekeeping](#cleanup-after-housekeeping)
+  - [Replace legacy keyrings](#replace-legacy-keyrings)
+  - [Remove Plasma Welcome](#remove-plasma-welcome)
   - [Remove Bluetooth](#remove-bluetooth)
+  - [Remove KWallet](#remove-kwallet)
+  - [Remove KDE Connect](#remove-kde-connect)
   - [Remove all pip packages](#remove-all-pip-packages)
+- [Nvidia Graphics](#nvidia-graphics)
 - [SSL Inspection](#ssl-inspection)
   - [Add root CA to java](#add-root-ca-to-java)
 - [Applications](#applications)
   - [Firefox](#firefox)
+  - [Timeshift](#timeshift)
 - [Other Tools](#other-tools)
   - [JAVA_HOME](#java_home)
   - [Exiftool](#exiftool)
@@ -78,10 +84,45 @@ After removing many packages do this:
 sudo apt-get autoremove && sudo apt-get autoclean
 ```
 
+### Replace Legacy Keyrings
+
+```shell
+for KEY in $( \
+    apt-key --keyring /etc/apt/trusted.gpg list \
+    | grep -E "(([ ]{1,2}(([0-9A-F]{4}))){10})" \
+    | tr -d " " \
+    | grep -E "([0-9A-F]){8}\b" \
+); do
+    K=${KEY:(-8)}
+    apt-key export $K \
+    | sudo gpg --dearmour -o /etc/apt/trusted.gpg.d/imported-from-trusted-gpg-$K.gpg
+done
+```
+
+Source: https://askubuntu.com/a/1415702
+
+### Remove Plasma Welcome
+
+```shell
+sudo apt-get purge --autoremove plasma-welcome
+```
+
 ### Remove Bluetooth
 
 ```shell
-sudo apt-get purge bluez
+sudo apt-get purge --autoremove bluez
+```
+
+### Remove KWallet
+
+```shell
+sudo apt-get purge --autoremove kwalletmanager
+```
+
+### Remove KDE Connect
+
+```shell
+sudo apt-get purge --autoremove kdeconnect
 ```
 
 ### Remove all pip packages
@@ -92,6 +133,23 @@ pip freeze > requirements.txt
 
 ```shell
 pip uninstall -r requirements.txt
+```
+
+## Nvidia Graphics
+
+To enable support for Nvidia Graphics Cards using Wayland do the following:
+
+Install the Nvidia Wayland library:
+
+```shell
+sudo apt-get install libnvidia-egl-wayland1
+```
+
+Afterwards list available Nvidia graphics drivers for Ubuntu derivates and install the recommended one:
+
+```shell
+sudo ubuntu-drivers list
+sudo ubuntu-drivers install
 ```
 
 ## SSL Inspection
@@ -115,6 +173,24 @@ flatpak install flathub org.mozilla.firefox
 
 To apply policies to Firefox via the [policies.json](firefox/policies.json), just place it at `/var/lib/flatpak/app/org.mozilla.firefox/x86_64/stable/<id>/files/lib/firefox/distribution`.  
 Restart Firefox and find applied policies at `about:policies`.
+
+Custom configs not available with the centralized policy configuration:
+
+- `full-screen-api.warning.timeout`: 0 (disables the fullscreen popup)
+- `reader.parse-on-load.enabled`: false (disables the simplified reader mode)
+- remove all removable search keywords in the search settings
+
+### Timeshift
+
+To fix a buggy and old version in the default repo, load a newer version from a non-default repo:
+```shell
+sudo add-apt-repository ppa:teejee2008/timeshift
+sudo apt-get install timeshift=24.01.1-0
+sudo apt-mark hold timeshift
+```
+
+Copy [timeshift.json](timeshift/timeshift.json) to /etc/timeshift/ to apply custom backup settings.  
+Adjust the backup drive if needed.
 
 ## Other Tools
 

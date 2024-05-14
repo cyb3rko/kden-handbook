@@ -13,7 +13,14 @@
     "DisablePocket": true,
     "DisableSetDesktopBackground": true,
     "FirefoxHome": {
-      "Search": true
+      "Search": true,
+      "TopSites": false,
+      "SponsoredTopSites": false,
+      "Highlights": false,
+      "Pocket": false,
+      "SponsoredPocket": false,
+      "Snippets": false,
+      "Locked": true
     },
     "HardwareAcceleration": true,
     "Homepage": {
@@ -47,8 +54,32 @@
         "Value": 0,
         "Status": "locked"
       },
+      "browser.translations.automaticallyPopup": {
+        "Value": false,
+        "Status": "locked"
+      },
+      "browser.translations.enable": {
+        "Value": false,
+        "Status": "locked"
+      },
+      "browser.translations.panelShown": {
+        "Value": false,
+        "Status": "locked"
+      },
+      "browser.urlbar.showSearchSuggestionsFirst": {
+        "Value": false,
+        "Status": "locked"
+      },
       "browser.vpn_promo.enabled": {
         "Value": false,
+        "Status": "locked"
+      },
+      "dom.w3c_touch_events.enabled": {
+        "Value": 0,
+        "Status": "locked"
+      },
+      "gfx.webrender.all": {
+        "Value": true,
         "Status": "locked"
       }
     },
