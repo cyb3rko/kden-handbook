@@ -3,7 +3,9 @@
 !.gradle/*
 !/Programming/Projects/Android/**/build/*
 !/Programming/Projects/Android/**/.cxx/*
+!/Programming/Projects/Web/**/build/*
 !__pycache__/*
 !node_modules/*
+!.next/*
 
 /Programming

@@ -10,6 +10,7 @@ System info: (KDE Neon + Plasma Wayland)
   - [AutoTrash](#autotrash)
   - [journalctl](#journalctl)
 - [Packages](#packages)
+  - [Flatpak dark mode applications](#flatpak-dark-mode-applications)
   - [Cleanup after housekeeping](#cleanup-after-housekeeping)
   - [Replace legacy keyrings](#replace-legacy-keyrings)
   - [Remove Plasma Welcome](#remove-plasma-welcome)
@@ -22,6 +23,7 @@ System info: (KDE Neon + Plasma Wayland)
   - [Add root CA to java](#add-root-ca-to-java)
 - [Applications](#applications)
   - [Firefox](#firefox)
+  - [OneDrive](#onedrive)
   - [Timeshift](#timeshift)
 - [Other Tools](#other-tools)
   - [JAVA_HOME](#java_home)
@@ -75,6 +77,17 @@ MaxRetentionSec=2months
 ```
 
 ## Packages
+
+### Flatpak dark mode applications
+
+To enable the Breeze Dark theme for Flatpak applications, change the setting in the following files:
+
+`~/.config/gtk-3.0/settings.ini` + `~/.config/gtk-4.0/settings.ini`
+```
+...
+gtk-theme-name=Breeze-Dark
+...
+```
 
 ### Cleanup after housekeeping
 
@@ -179,6 +192,21 @@ Custom configs not available with the centralized policy configuration:
 - `full-screen-api.warning.timeout`: 0 (disables the fullscreen popup)
 - `reader.parse-on-load.enabled`: false (disables the simplified reader mode)
 - remove all removable search keywords in the search settings
+
+### OneDrive
+
+To allow logging to `/var/log/onedrive`, do the following:
+
+```shell
+sudo mkdir /var/log/onedrive
+sudo chown root:niko /var/log/onedrive
+sudo chmod 0775 /var/log/onedrive
+```
+
+After initializing onedrive and BEFORE running the first sync, copy [config](onedrive/config) and [sync_list](onedrive/sync_list) to `~/.config/onedrive/`. Check the config with `onedrive --display-config`.
+
+First sync:  
+`onedrive --resync --synchronize`
 
 ### Timeshift
 

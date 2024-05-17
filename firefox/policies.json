@@ -50,6 +50,10 @@
         "Value": "DE",
         "Status": "locked"
       },
+      "browser.sessionstore.resume_from_crash": {
+        "Value": false,
+        "Status": "locked"
+      },
       "browser.startup.couldRestoreSession.count": {
         "Value": 0,
         "Status": "locked"
