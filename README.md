@@ -11,7 +11,7 @@ System info: (KDE Neon + Plasma Wayland)
   - [journalctl](#journalctl)
 - [Packages](#packages)
   - [Flatpak dark mode applications](#flatpak-dark-mode-applications)
-  - [Cleanup after housekeeping](#cleanup-after-housekeeping)
+  - [Packages Cleanup](#packages-cleanup)
   - [Replace legacy keyrings](#replace-legacy-keyrings)
   - [Remove Plasma Welcome](#remove-plasma-welcome)
   - [Remove Bluetooth](#remove-bluetooth)
@@ -89,12 +89,12 @@ gtk-theme-name=Breeze-Dark
 ...
 ```
 
-### Cleanup after housekeeping
+### Packages Cleanup
 
-After removing many packages do this:
+To automatically remove unused packages and applications:
 
 ```shell
-sudo apt-get autoremove && sudo apt-get autoclean
+sudo apt-get autoremove && sudo apt-get autoclean && flatpak uninstall --unused
 ```
 
 ### Replace Legacy Keyrings
