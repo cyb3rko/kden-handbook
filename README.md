@@ -25,6 +25,7 @@ System info: (KDE Neon + Plasma Wayland)
   - [Firefox](#firefox)
   - [OneDrive](#onedrive)
   - [Timeshift](#timeshift)
+  - [Wireshark](#wireshark)
 - [Other Tools](#other-tools)
   - [JAVA_HOME](#java_home)
   - [Exiftool](#exiftool)
@@ -225,6 +226,16 @@ sudo apt-mark hold timeshift
 
 Copy [timeshift.json](timeshift/timeshift.json) to /etc/timeshift/ to apply custom backup settings.  
 Adjust the backup drive if needed.
+
+### Wireshark
+
+To install Wireshark and allow traffic capture on all interfaces, do the following:
+
+```shell
+sudo apt-get install wireshark
+sudo chmod +x /usr/bin/dumpcap
+sudo adduser $USER wireshark
+```
 
 ## Other Tools
 
