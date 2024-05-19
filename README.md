@@ -195,6 +195,9 @@ Custom configs not available with the centralized policy configuration:
 
 ### OneDrive
 
+To install the current version (and not download from Ubuntu Universe) use the following installation instructions:  
+https://github.com/abraunegg/onedrive/blob/master/docs/ubuntu-package-install.md#distribution-ubuntu-2204
+
 To allow logging to `/var/log/onedrive`, do the following:
 
 ```shell
@@ -202,6 +205,9 @@ sudo mkdir /var/log/onedrive
 sudo chown root:niko /var/log/onedrive
 sudo chmod 0775 /var/log/onedrive
 ```
+
+Initialize onedrive:  
+`onedrive`
 
 After initializing onedrive and BEFORE running the first sync, copy [config](onedrive/config) and [sync_list](onedrive/sync_list) to `~/.config/onedrive/`. Check the config with `onedrive --display-config`.
 
