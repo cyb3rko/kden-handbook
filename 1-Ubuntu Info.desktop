@@ -1,9 +1,0 @@
-[Desktop Entry]
-Name=Ubuntu Info
-Exec=/home/niko/Dokumente/Skripte/ubuntu-info.sh
-Comment=
-Terminal=true
-PrefersNonDefaultGPU=false
-Icon=cinnamon-panel-launcher
-Type=Application
-Name[de_DE]=1-Ubuntu Info.desktop

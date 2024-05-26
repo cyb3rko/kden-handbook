@@ -1,0 +1,7 @@
+[Desktop Entry]
+Comment=
+Exec=/home/niko/Dokumente/Skripte/distro-info.sh
+Name[de_DE]=Distro Info
+Name=Distro Info
+Terminal=true
+Type=Application

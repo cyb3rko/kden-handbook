@@ -1,9 +1,7 @@
 [Desktop Entry]
-Name=Show Partitions
-Exec=/home/niko/Dokumente/Skripte/show-partitions.sh
 Comment=
+Exec=/home/niko/Dokumente/Skripte/show-partitions.sh
+Name[de_DE]=Show Partitions
+Name=Show Partitions
 Terminal=true
-PrefersNonDefaultGPU=false
-Icon=cinnamon-panel-launcher
 Type=Application
-Name[de_DE]=2-Show Partitions.desktop
