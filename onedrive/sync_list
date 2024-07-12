@@ -1,11 +1,14 @@
 !build/kotlin/*
+!.kotlin/*
 !venv/*
+!.venv/*
 !.gradle/*
-!/Programming/Projects/Android/**/build/*
-!/Programming/Projects/Android/**/.cxx/*
-!/Programming/Projects/Web/**/build/*
+!.idea/libraries/*
 !__pycache__/*
 !node_modules/*
 !.next/*
+!/Programming/Projects/Android/**/build/*
+!/Programming/Projects/Android/**/.cxx/*
+!/Programming/Projects/Web/**/build/*
 
 /Programming
