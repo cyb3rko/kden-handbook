@@ -25,6 +25,7 @@ System info: (KDE Neon + Plasma Wayland)
   - [Firefox](#firefox)
   - [OneDrive](#onedrive)
   - [Timeshift](#timeshift)
+  - [yt-dlp](#yt-dlp)
   - [Wireshark](#wireshark)
 - [Other Tools](#other-tools)
   - [JAVA_HOME](#java_home)
@@ -226,6 +227,13 @@ sudo apt-mark hold timeshift
 
 Copy [timeshift.json](timeshift/timeshift.json) to /etc/timeshift/ to apply custom backup settings.  
 Adjust the backup drive if needed.
+
+### yt-dlp
+
+```shell
+sudo curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp
+sudo chmod a+rx /usr/local/bin/yt-dlp
+```
 
 ### Wireshark
 
