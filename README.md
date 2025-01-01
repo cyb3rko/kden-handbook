@@ -1,3 +1,5 @@
+⚠️ Switched to [Fedora KDE](https://github.com/cyb3rko/fedokde-handbook)
+
 # KDE Neon Handbook
 
 System info: (KDE Neon + Plasma Wayland)
